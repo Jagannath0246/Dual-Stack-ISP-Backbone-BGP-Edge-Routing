@@ -75,16 +75,25 @@ ip route 0.0.0.0 0.0.0.0 203.0.113.1
 ## 🧪 Verification & Testing
 
 ### Test Case 1: eBGP Adjacency
-Objective: Verify the ISP and Customer routers have successfully formed a BGP neighbor relationship.
-Result: Session state is Established, actively receiving prefixes.
+**Objective:** Verify the ISP and Customer routers have successfully formed a BGP neighbor relationship.
+
+![BGP Summary](bgp_summary.png)
+
+*Result: Session state is Established, actively receiving prefixes.*
 
 ### Test Case 2: Route Redistribution Validation
-Objective: Ensure the internal ISP backbone (Core-C) learned the BGP customer route via EIGRP.
-Result: The 192.168.100.0/24 network appears as an EIGRP External (D EX) route.
+**Objective:** Ensure the internal ISP backbone (Core-C) learned the BGP customer route via EIGRP.
+
+![Core-C Route](core_c_route.png)
+
+*Result: The `192.168.100.0/24` network appears as an EIGRP External (`D EX`) route.*
 
 ### Test Case 3: End-to-End Data Plane Test
-Objective: Verify a packet can originate on the far side of the ISP core, traverse EIGRP, cross the BGP boundary, hit the customer LAN, and successfully return.
-Result: Successful ICMP Echo Replies confirm 100% data-plane functionality.
+**Objective:** Verify a packet can originate on the far side of the ISP core, traverse EIGRP, cross the BGP boundary, hit the customer LAN, and successfully return.
+
+![End to End Ping](end_to_end_ping.png)
+
+*Result: Successful ICMP Echo Replies confirm 100% data-plane functionality.*
 
 ## 💡 Real-World Troubleshooting & Engineering Challenges
 During the simulation build, several technical roadblocks were encountered and systematically resolved:
