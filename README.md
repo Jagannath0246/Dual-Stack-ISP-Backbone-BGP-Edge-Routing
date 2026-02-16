@@ -12,7 +12,7 @@ The primary objective was to successfully establish an end-to-end data plane acr
 ---
 
 ## 🏗️ Network Topology
-![Network Topology Diagram](src/topology.png)
+![Network Topology Diagram](topology.png)
 *A high-availability triangular ISP core (Routers A, B, C) providing transit for an External Customer.*
 
 ### 🔧 Core Technologies Implemented
